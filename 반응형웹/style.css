@@ -1,0 +1,92 @@
+:root {
+  --ti-cursor-margin-left: 1em;
+  --ti-cursor-color: darkblue;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: rgb(34, 46, 72);
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+.logo i {
+  color: rgb(251, 149, 25);
+}
+
+.menu-bar {
+  display: flex;
+  list-style: none;
+}
+
+.menu-bar li {
+  padding: 8px 12px;
+}
+
+.menu-bar li:hover {
+  background-color: rgb(193, 227, 216);
+  border-radius: 5px;
+}
+.icons {
+  display: flex;
+  list-style: none;
+}
+
+.icons li {
+  color: white;
+  padding: 8px 12px;
+}
+
+.toggleicons {
+  position: absolute;
+  right: 15px;
+  padding: 8px 12px;
+  font-size: 1.5em;
+  color: rgb(251, 149, 25);
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .menu-bar {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 8px 12px;
+    display: none;
+  }
+  .logo {
+    align-items: flex-start;
+    width: 100%;
+    padding: 8px 12px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .toggleicons {
+    display: block;
+  }
+
+  .menu-bar.active,
+  .icons.active {
+    display: flex;
+  }
+}
